@@ -1,5 +1,3 @@
-#!bin/env/bash
+#!bin/env/sh
 
-echo 'Hello, world!
-d
-f
+echo 'Hello, world!'

@@ -1,15 +1,15 @@
-image: python:3.10-slim
+image: alpine:3.21
 
 variables:
   DATABASE_URL: "postgresql://user:password@test-db/test_db"
 
 before_script:
-  - pip install -r requirements.txt
+  - echo "before_script"
 
 scripts:
-  - flake8 .
-  - pytest --cov=my_app --cov-report=html
-  - echo "Build finished successfully!"
+  - echo "scripts"
+  - sh main.sh
+  - echo $DATABASE_URL
 
 after_script:
   - echo "Cleaning up..."

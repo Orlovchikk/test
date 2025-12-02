@@ -8,6 +8,7 @@ before_script:
 
 scripts:
   - echo "scripts"
+  - echo hello stderr >&2
   - sh main.sh
   - echo $DATABASE_URL
 

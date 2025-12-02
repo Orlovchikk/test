@@ -4,7 +4,7 @@ variables:
   DATABASE_URL: "postgresql://user:password@test-db/test_db"
 
 before_script:
-  - echo "before_script"
+  - echo "before_script" stderr >&2
 
 scripts:
   - echo "scripts"
